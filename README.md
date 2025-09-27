@@ -1,111 +1,54 @@
-Sentiment Analysis on Twitter Data (Pfizer Vaccine Tweets)
-📌 Project Overview
+**Sentiment Analysis on Twitter Data**
+**📌 Overview**
 
-This project applies Sentiment Analysis to classify tweets related to the Pfizer vaccine into Positive, Negative, or Neutral categories. The aim is to leverage Natural Language Processing (NLP) and Machine Learning (ML) techniques to detect public opinion trends, which can support applications like:
+This project performs Sentiment Analysis on Pfizer vaccine tweets, classifying them as Positive, Negative, or Neutral. It demonstrates the use of NLP and Machine Learning for opinion mining and content moderation tasks.
 
-Monitoring brand or product reputation
+**📂 Dataset**
 
-Identifying misinformation and harmful content
+Source: [Kaggle – Pfizer Vaccine Tweets]
 
-Supporting Trust & Safety workflows (spam/abuse detection)
+Size: ~11,000 tweets (CSV format)
 
-📂 Dataset
+Target: Sentiment classification
 
-Source: Kaggle – Pfizer Vaccine Tweets Dataset
+**⚙️ Methodology**
 
-Records: ~11,000 tweets
+Preprocessing: Cleaning, stemming, stopword removal, tokenization
 
-Format: CSV (comma-separated values)
+Feature Extraction: TF-IDF, sentiment polarity scores
 
-Features used: Text content of tweets
+Models: Logistic Regression, Support Vector Classifier (SVC) with hyperparameter tuning
 
-⚙️ Methodology
+Visualization: Bar charts, pie charts, word clouds, heatmap
 
-Data Collection & Cleaning
+**📊 Results**
 
-Removed URLs, hashtags, punctuations, stop words
+Logistic Regression: 84.64%
 
-Applied lowercasing, stemming, and tokenization
+Tuned Logistic Regression: 85.92%
 
-Feature Engineering
+SVC: 87.34%
 
-Implemented TF-IDF (Term Frequency–Inverse Document Frequency)
+Tuned SVC: 87.58% ✅ Best
 
-Extracted sentiment polarity scores
+🛠️ Tech Stack
 
-Model Building
+Python (Pandas, NumPy, scikit-learn, NLTK, TextBlob)
 
-Algorithms used:
+Matplotlib, Seaborn, WordCloud
 
-Logistic Regression
+Jupyter Notebook
 
-Support Vector Classifier (SVC)
-
-Applied Hyperparameter Tuning (GridSearchCV)
-
-Visualization
-
-Pie charts, bar graphs for sentiment distribution
-
-Word clouds for positive, neutral, and negative tweets
-
-Heatmap for correlation of features
-
-📊 Results
-
-Logistic Regression Accuracy: 84.64%
-
-Tuned Logistic Regression Accuracy: 85.92%
-
-Support Vector Classifier (SVC) Accuracy: 87.34%
-
-Tuned SVC Accuracy: 87.58% ✅ (Best Performing Model)
-
-🛠️ Tools & Libraries
-
-Python (v3.x)
-
-Pandas, NumPy – Data manipulation
-
-NLTK, TextBlob – NLP preprocessing
-
-scikit-learn – ML model building & evaluation
-
-Matplotlib, Seaborn, WordCloud – Visualization
-
-🚀 How to Run
-
-Clone this repository:
-
+**🚀 Run Instructions**
 git clone https://github.com/yourusername/sentiment-analysis.git
 cd sentiment-analysis
-
-
-Install dependencies:
-
 pip install -r requirements.txt
-
-
-Run the Jupyter Notebook / Python script:
-
 jupyter notebook Sentiment_Analysis.ipynb
 
-🔮 Future Enhancements
+**🔮 Future Work**
 
-Integrate with YouTube/Twitter API for real-time sentiment analysis
+Real-time analysis using Twitter/YouTube APIs
 
-Extend to multilingual datasets
+Multilingual sentiment detection
 
-Incorporate Deep Learning (LSTMs / Transformers) for improved accuracy
-
-Adapt models for spam/abuse detection in Trust & Safety systems
-
-📌 References
-
-Kaggle Dataset – Pfizer Vaccine Tweets
-
-scikit-learn Documentation
-
-NLTK & TextBlob Libraries
-
-Research on Sentiment Analysis & Opinion Mining
+Deep learning models (LSTM, Transformers)
